@@ -1,10 +1,6 @@
-# Node.js template
-
-This is a Node.js project.
-
-Add your [configuration](https://codesandbox.io/docs/projects/learn/setting-up/tasks) to optimize it for [CodeSandbox](https://codesandbox.io/p/dashboard).
-
-## Resources
-
-- [CodeSandbox — Docs](https://codesandbox.io/docs/learn)
-- [CodeSandbox — Discord](https://discord.gg/Ggarp3pX5H)
+# Создаем образ
+docker build -t weather-app .
+# Запускаем контейнер
+docker run -d -p 3000:3000 --name weather-server weather-app
+# Запускам тесты
+docker exec weather-server npm test
